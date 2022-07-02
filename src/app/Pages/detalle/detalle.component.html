@@ -1,0 +1,15 @@
+<div *ngIf="isLoading">
+    LOADING...
+</div>
+<div *ngIf="!isLoading && !isError">
+    <img src="{{producto?.pictures[0].secure_url}}" alt="producto">
+    <img src="{{producto?.pictures[1].secure_url}}" alt="producto">
+    <img src="{{producto?.pictures[2].secure_url}}" alt="producto">
+    <h1>{{producto?.title}}</h1>
+    <p>{{producto?.price | currency:'ARS $'}}</p>
+    <button>Comprar</button>
+    <!-- agregar funcionalidad -->
+    <button>agregar al carrito</button> 
+    <h5>DESCRIPCION</h5>
+    <p>{{description?.plain_text}}</p>
+</div>

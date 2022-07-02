@@ -1,0 +1,12 @@
+<div *ngIf="isLoading">
+    LOADING...
+</div>
+<div *ngFor="let producto of productos">
+    <div *ngIf="!isLoading">
+        <h2>{{producto.title | uppercase}}</h2>
+        <img src="{{producto.thumbnail}}" alt="producto">
+        <p>{{producto.price | currency}}</p>
+        <button routerLink="/producto/{{producto.id}}">ver detalle</button>
+        <button>agregar al carrito</button> 
+    </div>
+</div>
